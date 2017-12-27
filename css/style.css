@@ -1,0 +1,153 @@
+html{
+    box-sizing: border-box;
+    font-size: 14px;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+/*PRODUCT*/
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product-item{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3),
+                1px 3px 1px rgba(0,0,0,.2),
+                1px -1px 1px rgba(0,0,0,.2),
+                -1px 0px 1px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    max-width: 275px;
+    margin: 10px;
+    padding: 0.6em;
+}
+
+.product-image{
+    position: relative;
+    padding-top: 75%;
+}
+.product-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px 3px 0 0;
+}
+.product-detail{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #666;
+}
+.product-title{
+    color: #333;
+    margin-top: 5px;
+}
+.product-content{
+    margin-top: 10px;
+    flex: 1;
+    position: relative;
+    text-align: justify;
+}
+.product-item:first-child .product-content:hover:before{
+    content: attr(data-hover);
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    height: 200%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+    padding: 10px;
+    z-index: 1;
+}
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.product-info span{
+    color: #324B4C;
+    font-size: 1.8em;
+}
+.btn-add{
+    background-color: #00BDC6;
+    padding: 0.6em 1em;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*MODAL*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 2%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    position: relative;
+    padding-bottom: 40%;
+}
+.modal-content img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 90%;
+    width: 90%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*END MODAL*/
